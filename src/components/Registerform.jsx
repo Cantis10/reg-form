@@ -33,14 +33,6 @@ function Registerform() {
       return;
     }
 
-    {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (emailRegex.test(email)) {
-        returnError("Please enter A valid email");
-        return;
-      }
-    }
-
     if (password !== confirmPassword) {
       returnError("Passwords do not match.");
       return;
