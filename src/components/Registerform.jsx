@@ -37,7 +37,7 @@ function Registerform() {
       return;
     }
 
-    if (containsNumber(firName) || containsNumber(lastName)) {
+    if (containsNumber(firstName) || containsNumber(lastName)) {
       returnError("Do not input numbers in the name fields.");
       return;
     }
@@ -59,7 +59,6 @@ function Registerform() {
         <img src="${successImg}" alt="Success" />
       </div>
     `;
-      return;
     }
   }
 
