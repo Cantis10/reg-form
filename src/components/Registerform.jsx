@@ -37,6 +37,11 @@ function Registerform() {
       returnError("Do not input numbers in the name fields.");
       return;
     }
+
+    if (password.length < 8) {
+      returnError("Password must be at least 8 characters long.");
+      return;
+    }
     if (password !== confirmPassword) {
       returnError("Passwords do not match.");
       return;
