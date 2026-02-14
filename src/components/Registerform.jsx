@@ -33,6 +33,10 @@ function Registerform() {
       return;
     }
 
+    if (containsNumber(firName) || containsNumber(lastName)) {
+      returnError("Do not input numbers in the name fields.");
+      return;
+    }
     if (password !== confirmPassword) {
       returnError("Passwords do not match.");
       return;
