@@ -11,17 +11,6 @@ function Registerform() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const element = formRef.current;
-    {
-      element.innerHTML = `
-      <div class="success">
-        <h1>Thank you for Registering!</h1>
-        <img src="${successImg}" alt="Success" />
-      </div>
-    `;
-      return;
-    }
-
     var firstName = document.getElementsByName("first-name")[0].value;
     var lastName = document.getElementsByName("last-name")[0].value;
     var phoneNumber = document.getElementsByName("phone-number")[0].value;
@@ -54,6 +43,17 @@ function Registerform() {
 
     if (password !== confirmPassword) {
       returnError("Passwords do not match.");
+      return;
+    }
+
+    const element = formRef.current;
+    {
+      element.innerHTML = `
+      <div class="success">
+        <h1>Thank you for Registering!</h1>
+        <img src="${successImg}" alt="Success" />
+      </div>
+    `;
       return;
     }
   }
