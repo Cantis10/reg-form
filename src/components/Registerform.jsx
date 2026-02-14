@@ -8,6 +8,10 @@ function Registerform() {
     alert(errorType); //you shouldnt have filled those forms like a retard!
   }
 
+  function containsNumber(input) {
+    return /\d/.test(input);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
